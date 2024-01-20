@@ -1,0 +1,9 @@
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\bin\Debug\gestion_bancaire.exe.config
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\bin\Debug\gestion_bancaire.exe
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\bin\Debug\gestion_bancaire.pdb
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.Properties.Resources.resources
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.csproj.GenerateResource.Cache
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.exe
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.pdb
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.csprojResolveAssemblyReference.cache
+C:\Users\Nambinintsoa\Documents\gestion_bancaire\gestion_bancaire\obj\Debug\gestion_bancaire.TahiryBanky.resources

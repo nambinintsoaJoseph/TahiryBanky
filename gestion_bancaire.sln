@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestion_bancaire", "gestion_bancaire\gestion_bancaire.csproj", "{1AC3B741-F008-410D-B4C2-DAA5F872388D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AC3B741-F008-410D-B4C2-DAA5F872388D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC3B741-F008-410D-B4C2-DAA5F872388D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC3B741-F008-410D-B4C2-DAA5F872388D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC3B741-F008-410D-B4C2-DAA5F872388D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
