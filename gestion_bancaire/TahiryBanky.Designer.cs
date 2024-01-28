@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TahiryBanky));
             this.menu = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.rechercher_menu = new System.Windows.Forms.Button();
+            this.modifier_client_menu = new System.Windows.Forms.Button();
+            this.lister_client = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.consulter = new System.Windows.Forms.Button();
@@ -63,18 +64,46 @@
             this.retrait = new System.Windows.Forms.Panel();
             this.versement = new System.Windows.Forms.Panel();
             this.consultation_solde = new System.Windows.Forms.Panel();
-            this.type_info = new System.Windows.Forms.Label();
-            this.montant_info = new System.Windows.Forms.Label();
-            this.adresse_info = new System.Windows.Forms.Label();
-            this.tel_info = new System.Windows.Forms.Label();
-            this.date_n_info = new System.Windows.Forms.Label();
-            this.nom_info = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.liste = new System.Windows.Forms.Panel();
+            this.modifier_client = new System.Windows.Forms.Panel();
+            this.rechercher = new System.Windows.Forms.Panel();
+            this.valider_recherche = new System.Windows.Forms.Button();
+            this.recherche_versement = new System.Windows.Forms.RadioButton();
+            this.recherche_retrait = new System.Windows.Forms.RadioButton();
+            this.recherche_client = new System.Windows.Forms.RadioButton();
+            this.label32 = new System.Windows.Forms.Label();
+            this.d_fin = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.d_debut = new System.Windows.Forms.DateTimePicker();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.nom_modif = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.valider_modification_client = new System.Windows.Forms.Button();
+            this.tel_modif = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.adresse_modif = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.num_bancaire_modif = new System.Windows.Forms.TextBox();
+            this.labell = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.liste_client_lister = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.conteneur_informations_consulter = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.nom_info = new System.Windows.Forms.Label();
+            this.type_info = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.montant_info = new System.Windows.Forms.Label();
+            this.date_n_info = new System.Windows.Forms.Label();
+            this.adresse_info = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tel_info = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.photo_client_consulter = new System.Windows.Forms.PictureBox();
             this.valider_information_compte = new System.Windows.Forms.Button();
             this.num_compte_info = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -97,14 +126,21 @@
             this.retrait.SuspendLayout();
             this.versement.SuspendLayout();
             this.consultation_solde.SuspendLayout();
+            this.liste.SuspendLayout();
+            this.modifier_client.SuspendLayout();
+            this.rechercher.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.liste_client_lister)).BeginInit();
+            this.conteneur_informations_consulter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo_client_consulter)).BeginInit();
             this.SuspendLayout();
             // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.Coral;
-            this.menu.Controls.Add(this.button8);
-            this.menu.Controls.Add(this.button7);
-            this.menu.Controls.Add(this.button6);
+            this.menu.Controls.Add(this.button3);
+            this.menu.Controls.Add(this.rechercher_menu);
+            this.menu.Controls.Add(this.modifier_client_menu);
+            this.menu.Controls.Add(this.lister_client);
             this.menu.Controls.Add(this.label9);
             this.menu.Controls.Add(this.label8);
             this.menu.Controls.Add(this.consulter);
@@ -118,35 +154,48 @@
             this.menu.Size = new System.Drawing.Size(200, 553);
             this.menu.TabIndex = 0;
             // 
-            // button8
+            // button3
             // 
-            this.button8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(3, 386);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(194, 28);
-            this.button8.TabIndex = 19;
-            this.button8.Text = "Rechercher";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(3, 420);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(194, 28);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Statistiques";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // rechercher_menu
             // 
-            this.button7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(3, 352);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(194, 28);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Modifier un Client";
-            this.button7.UseVisualStyleBackColor = true;
+            this.rechercher_menu.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rechercher_menu.Location = new System.Drawing.Point(3, 386);
+            this.rechercher_menu.Name = "rechercher_menu";
+            this.rechercher_menu.Size = new System.Drawing.Size(194, 28);
+            this.rechercher_menu.TabIndex = 19;
+            this.rechercher_menu.Text = "Rechercher";
+            this.rechercher_menu.UseVisualStyleBackColor = true;
+            this.rechercher_menu.Click += new System.EventHandler(this.rechercher_menu_Click);
             // 
-            // button6
+            // modifier_client_menu
             // 
-            this.button6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(3, 318);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(194, 28);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Lister les Clients";
-            this.button6.UseVisualStyleBackColor = true;
+            this.modifier_client_menu.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifier_client_menu.Location = new System.Drawing.Point(3, 352);
+            this.modifier_client_menu.Name = "modifier_client_menu";
+            this.modifier_client_menu.Size = new System.Drawing.Size(194, 28);
+            this.modifier_client_menu.TabIndex = 18;
+            this.modifier_client_menu.Text = "Modifier un Client";
+            this.modifier_client_menu.UseVisualStyleBackColor = true;
+            this.modifier_client_menu.Click += new System.EventHandler(this.modifier_client_menu_Click);
+            // 
+            // lister_client
+            // 
+            this.lister_client.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lister_client.Location = new System.Drawing.Point(3, 318);
+            this.lister_client.Name = "lister_client";
+            this.lister_client.Size = new System.Drawing.Size(194, 28);
+            this.lister_client.TabIndex = 17;
+            this.lister_client.Text = "Lister les Clients";
+            this.lister_client.UseVisualStyleBackColor = true;
+            this.lister_client.Click += new System.EventHandler(this.lister_client_Click);
             // 
             // label9
             // 
@@ -417,12 +466,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 9);
+            this.label1.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(598, 51);
+            this.label1.Size = new System.Drawing.Size(534, 41);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Formulaire d\'Inscription";
+            this.label1.Text = "📝 Formulaire d\'Inscription";
             // 
             // retrait
             // 
@@ -456,18 +505,9 @@
             // 
             // consultation_solde
             // 
-            this.consultation_solde.Controls.Add(this.type_info);
-            this.consultation_solde.Controls.Add(this.montant_info);
-            this.consultation_solde.Controls.Add(this.adresse_info);
-            this.consultation_solde.Controls.Add(this.tel_info);
-            this.consultation_solde.Controls.Add(this.date_n_info);
-            this.consultation_solde.Controls.Add(this.nom_info);
-            this.consultation_solde.Controls.Add(this.label22);
-            this.consultation_solde.Controls.Add(this.label21);
-            this.consultation_solde.Controls.Add(this.label20);
-            this.consultation_solde.Controls.Add(this.label19);
-            this.consultation_solde.Controls.Add(this.label18);
-            this.consultation_solde.Controls.Add(this.label17);
+            this.consultation_solde.Controls.Add(this.liste);
+            this.consultation_solde.Controls.Add(this.conteneur_informations_consulter);
+            this.consultation_solde.Controls.Add(this.photo_client_consulter);
             this.consultation_solde.Controls.Add(this.valider_information_compte);
             this.consultation_solde.Controls.Add(this.num_compte_info);
             this.consultation_solde.Controls.Add(this.label16);
@@ -477,130 +517,438 @@
             this.consultation_solde.Size = new System.Drawing.Size(693, 553);
             this.consultation_solde.TabIndex = 6;
             // 
-            // type_info
+            // liste
             // 
-            this.type_info.AutoSize = true;
-            this.type_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.type_info.Location = new System.Drawing.Point(121, 376);
-            this.type_info.Name = "type_info";
-            this.type_info.Size = new System.Drawing.Size(130, 24);
-            this.type_info.TabIndex = 26;
-            this.type_info.Text = "          ";
+            this.liste.Controls.Add(this.modifier_client);
+            this.liste.Controls.Add(this.liste_client_lister);
+            this.liste.Controls.Add(this.label23);
+            this.liste.Location = new System.Drawing.Point(0, 0);
+            this.liste.Name = "liste";
+            this.liste.Size = new System.Drawing.Size(693, 553);
+            this.liste.TabIndex = 29;
+            this.liste.Visible = false;
             // 
-            // montant_info
+            // modifier_client
             // 
-            this.montant_info.AutoSize = true;
-            this.montant_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montant_info.Location = new System.Drawing.Point(266, 332);
-            this.montant_info.Name = "montant_info";
-            this.montant_info.Size = new System.Drawing.Size(130, 24);
-            this.montant_info.TabIndex = 25;
-            this.montant_info.Text = "          ";
+            this.modifier_client.Controls.Add(this.rechercher);
+            this.modifier_client.Controls.Add(this.nom_modif);
+            this.modifier_client.Controls.Add(this.label28);
+            this.modifier_client.Controls.Add(this.valider_modification_client);
+            this.modifier_client.Controls.Add(this.tel_modif);
+            this.modifier_client.Controls.Add(this.label27);
+            this.modifier_client.Controls.Add(this.adresse_modif);
+            this.modifier_client.Controls.Add(this.label26);
+            this.modifier_client.Controls.Add(this.label25);
+            this.modifier_client.Controls.Add(this.num_bancaire_modif);
+            this.modifier_client.Controls.Add(this.labell);
+            this.modifier_client.Controls.Add(this.label24);
+            this.modifier_client.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifier_client.Location = new System.Drawing.Point(0, 0);
+            this.modifier_client.Name = "modifier_client";
+            this.modifier_client.Size = new System.Drawing.Size(693, 553);
+            this.modifier_client.TabIndex = 2;
+            this.modifier_client.Visible = false;
             // 
-            // adresse_info
+            // rechercher
             // 
-            this.adresse_info.AutoSize = true;
-            this.adresse_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adresse_info.Location = new System.Drawing.Point(157, 292);
-            this.adresse_info.Name = "adresse_info";
-            this.adresse_info.Size = new System.Drawing.Size(130, 24);
-            this.adresse_info.TabIndex = 24;
-            this.adresse_info.Text = "          ";
+            this.rechercher.Controls.Add(this.valider_recherche);
+            this.rechercher.Controls.Add(this.recherche_versement);
+            this.rechercher.Controls.Add(this.recherche_retrait);
+            this.rechercher.Controls.Add(this.recherche_client);
+            this.rechercher.Controls.Add(this.label32);
+            this.rechercher.Controls.Add(this.d_fin);
+            this.rechercher.Controls.Add(this.label31);
+            this.rechercher.Controls.Add(this.d_debut);
+            this.rechercher.Controls.Add(this.label30);
+            this.rechercher.Controls.Add(this.label29);
+            this.rechercher.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rechercher.Location = new System.Drawing.Point(0, 0);
+            this.rechercher.Name = "rechercher";
+            this.rechercher.Size = new System.Drawing.Size(727, 553);
+            this.rechercher.TabIndex = 32;
+            this.rechercher.Visible = false;
             // 
-            // tel_info
+            // valider_recherche
             // 
-            this.tel_info.AutoSize = true;
-            this.tel_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tel_info.Location = new System.Drawing.Point(181, 250);
-            this.tel_info.Name = "tel_info";
-            this.tel_info.Size = new System.Drawing.Size(130, 24);
-            this.tel_info.TabIndex = 23;
-            this.tel_info.Text = "          ";
+            this.valider_recherche.BackColor = System.Drawing.Color.ForestGreen;
+            this.valider_recherche.Location = new System.Drawing.Point(218, 283);
+            this.valider_recherche.Margin = new System.Windows.Forms.Padding(0);
+            this.valider_recherche.Name = "valider_recherche";
+            this.valider_recherche.Size = new System.Drawing.Size(350, 47);
+            this.valider_recherche.TabIndex = 9;
+            this.valider_recherche.Text = "🔍 Rechercher";
+            this.valider_recherche.UseVisualStyleBackColor = false;
+            this.valider_recherche.Click += new System.EventHandler(this.valider_recherche_Click);
             // 
-            // date_n_info
+            // recherche_versement
             // 
-            this.date_n_info.AutoSize = true;
-            this.date_n_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_n_info.Location = new System.Drawing.Point(276, 208);
-            this.date_n_info.Name = "date_n_info";
-            this.date_n_info.Size = new System.Drawing.Size(130, 24);
-            this.date_n_info.TabIndex = 22;
-            this.date_n_info.Text = "          ";
+            this.recherche_versement.AutoSize = true;
+            this.recherche_versement.Location = new System.Drawing.Point(152, 234);
+            this.recherche_versement.Name = "recherche_versement";
+            this.recherche_versement.Size = new System.Drawing.Size(136, 28);
+            this.recherche_versement.TabIndex = 8;
+            this.recherche_versement.TabStop = true;
+            this.recherche_versement.Text = "Versement";
+            this.recherche_versement.UseVisualStyleBackColor = true;
             // 
-            // nom_info
+            // recherche_retrait
             // 
-            this.nom_info.AutoSize = true;
-            this.nom_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nom_info.Location = new System.Drawing.Point(109, 163);
-            this.nom_info.Name = "nom_info";
-            this.nom_info.Size = new System.Drawing.Size(130, 24);
-            this.nom_info.TabIndex = 21;
-            this.nom_info.Text = "          ";
+            this.recherche_retrait.AutoSize = true;
+            this.recherche_retrait.Location = new System.Drawing.Point(152, 200);
+            this.recherche_retrait.Name = "recherche_retrait";
+            this.recherche_retrait.Size = new System.Drawing.Size(112, 28);
+            this.recherche_retrait.TabIndex = 7;
+            this.recherche_retrait.TabStop = true;
+            this.recherche_retrait.Text = "Retrait";
+            this.recherche_retrait.UseVisualStyleBackColor = true;
             // 
-            // label22
+            // recherche_client
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(21, 374);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 24);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Type : ";
+            this.recherche_client.AutoSize = true;
+            this.recherche_client.Location = new System.Drawing.Point(152, 166);
+            this.recherche_client.Name = "recherche_client";
+            this.recherche_client.Size = new System.Drawing.Size(352, 28);
+            this.recherche_client.TabIndex = 6;
+            this.recherche_client.TabStop = true;
+            this.recherche_client.Text = "Client (date d\'inscription)";
+            this.recherche_client.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // label32
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(21, 332);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(250, 24);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "Montant du compte : ";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(21, 208);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(106, 24);
+            this.label32.TabIndex = 5;
+            this.label32.Text = "Types : ";
             // 
-            // label20
+            // d_fin
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 291);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(130, 24);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Adresse : ";
+            this.d_fin.Location = new System.Drawing.Point(152, 119);
+            this.d_fin.Name = "d_fin";
+            this.d_fin.Size = new System.Drawing.Size(518, 32);
+            this.d_fin.TabIndex = 4;
             // 
-            // label19
+            // label31
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(21, 250);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(154, 24);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Téléphone : ";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(21, 125);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(82, 24);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "Fin : ";
             // 
-            // label18
+            // d_debut
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(20, 208);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(250, 24);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Date de naissance : ";
+            this.d_debut.Location = new System.Drawing.Point(152, 68);
+            this.d_debut.Name = "d_debut";
+            this.d_debut.Size = new System.Drawing.Size(518, 32);
+            this.d_debut.TabIndex = 2;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(21, 77);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(106, 24);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Début : ";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(107, 11);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(496, 41);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "🔎 Interface de recherche";
+            // 
+            // nom_modif
+            // 
+            this.nom_modif.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nom_modif.Location = new System.Drawing.Point(372, 283);
+            this.nom_modif.Name = "nom_modif";
+            this.nom_modif.Size = new System.Drawing.Size(298, 32);
+            this.nom_modif.TabIndex = 31;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(21, 292);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(334, 24);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "Nom du Client du client  : \r\n";
+            // 
+            // valider_modification_client
+            // 
+            this.valider_modification_client.BackColor = System.Drawing.Color.ForestGreen;
+            this.valider_modification_client.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valider_modification_client.Location = new System.Drawing.Point(372, 464);
+            this.valider_modification_client.Name = "valider_modification_client";
+            this.valider_modification_client.Size = new System.Drawing.Size(298, 46);
+            this.valider_modification_client.TabIndex = 29;
+            this.valider_modification_client.Text = "✔ Mettre à jour";
+            this.valider_modification_client.UseVisualStyleBackColor = false;
+            this.valider_modification_client.Click += new System.EventHandler(this.valider_modification_client_Click);
+            // 
+            // tel_modif
+            // 
+            this.tel_modif.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tel_modif.Location = new System.Drawing.Point(372, 400);
+            this.tel_modif.Name = "tel_modif";
+            this.tel_modif.Size = new System.Drawing.Size(298, 32);
+            this.tel_modif.TabIndex = 28;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(21, 408);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(262, 24);
+            this.label27.TabIndex = 27;
+            this.label27.Text = "Numéro de téléphone :";
+            // 
+            // adresse_modif
+            // 
+            this.adresse_modif.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adresse_modif.Location = new System.Drawing.Point(373, 339);
+            this.adresse_modif.Name = "adresse_modif";
+            this.adresse_modif.Size = new System.Drawing.Size(298, 32);
+            this.adresse_modif.TabIndex = 26;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(21, 347);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(262, 24);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Adresse du client  : \r\n";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(164, 215);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(345, 32);
+            this.label25.TabIndex = 24;
+            this.label25.Text = "Nouvelles informations";
+            // 
+            // num_bancaire_modif
+            // 
+            this.num_bancaire_modif.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_bancaire_modif.Location = new System.Drawing.Point(372, 107);
+            this.num_bancaire_modif.Name = "num_bancaire_modif";
+            this.num_bancaire_modif.Size = new System.Drawing.Size(298, 32);
+            this.num_bancaire_modif.TabIndex = 23;
+            // 
+            // labell
+            // 
+            this.labell.AutoSize = true;
+            this.labell.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labell.Location = new System.Drawing.Point(20, 114);
+            this.labell.Name = "labell";
+            this.labell.Size = new System.Drawing.Size(346, 24);
+            this.labell.TabIndex = 22;
+            this.labell.Text = "Numero du compte bancaire : ";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(69, 11);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(534, 41);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "✏ Modification d\'un client";
+            // 
+            // liste_client_lister
+            // 
+            this.liste_client_lister.AllowUserToAddRows = false;
+            this.liste_client_lister.AllowUserToDeleteRows = false;
+            this.liste_client_lister.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.liste_client_lister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.liste_client_lister.Location = new System.Drawing.Point(0, 74);
+            this.liste_client_lister.Name = "liste_client_lister";
+            this.liste_client_lister.ReadOnly = true;
+            this.liste_client_lister.RowHeadersWidth = 110;
+            this.liste_client_lister.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.liste_client_lister.Size = new System.Drawing.Size(693, 533);
+            this.liste_client_lister.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(154, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(401, 41);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "📖 Liste des clients";
+            // 
+            // conteneur_informations_consulter
+            // 
+            this.conteneur_informations_consulter.Controls.Add(this.label17);
+            this.conteneur_informations_consulter.Controls.Add(this.nom_info);
+            this.conteneur_informations_consulter.Controls.Add(this.type_info);
+            this.conteneur_informations_consulter.Controls.Add(this.label18);
+            this.conteneur_informations_consulter.Controls.Add(this.label22);
+            this.conteneur_informations_consulter.Controls.Add(this.montant_info);
+            this.conteneur_informations_consulter.Controls.Add(this.date_n_info);
+            this.conteneur_informations_consulter.Controls.Add(this.adresse_info);
+            this.conteneur_informations_consulter.Controls.Add(this.label21);
+            this.conteneur_informations_consulter.Controls.Add(this.tel_info);
+            this.conteneur_informations_consulter.Controls.Add(this.label19);
+            this.conteneur_informations_consulter.Controls.Add(this.label20);
+            this.conteneur_informations_consulter.Location = new System.Drawing.Point(0, 280);
+            this.conteneur_informations_consulter.Name = "conteneur_informations_consulter";
+            this.conteneur_informations_consulter.Size = new System.Drawing.Size(693, 273);
+            this.conteneur_informations_consulter.TabIndex = 28;
+            this.conteneur_informations_consulter.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(21, 163);
+            this.label17.Location = new System.Drawing.Point(21, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 24);
             this.label17.TabIndex = 4;
             this.label17.Text = "Nom : ";
             // 
+            // nom_info
+            // 
+            this.nom_info.AutoSize = true;
+            this.nom_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nom_info.Location = new System.Drawing.Point(109, 24);
+            this.nom_info.Name = "nom_info";
+            this.nom_info.Size = new System.Drawing.Size(130, 24);
+            this.nom_info.TabIndex = 21;
+            this.nom_info.Text = "          ";
+            // 
+            // type_info
+            // 
+            this.type_info.AutoSize = true;
+            this.type_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.type_info.Location = new System.Drawing.Point(241, 233);
+            this.type_info.Name = "type_info";
+            this.type_info.Size = new System.Drawing.Size(130, 24);
+            this.type_info.TabIndex = 26;
+            this.type_info.Text = "          ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(20, 60);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(250, 24);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Date de naissance : ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(21, 233);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(214, 24);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Type du compte : ";
+            // 
+            // montant_info
+            // 
+            this.montant_info.AutoSize = true;
+            this.montant_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montant_info.Location = new System.Drawing.Point(277, 194);
+            this.montant_info.Name = "montant_info";
+            this.montant_info.Size = new System.Drawing.Size(130, 24);
+            this.montant_info.TabIndex = 25;
+            this.montant_info.Text = "          ";
+            // 
+            // date_n_info
+            // 
+            this.date_n_info.AutoSize = true;
+            this.date_n_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_n_info.Location = new System.Drawing.Point(266, 60);
+            this.date_n_info.Name = "date_n_info";
+            this.date_n_info.Size = new System.Drawing.Size(130, 24);
+            this.date_n_info.TabIndex = 22;
+            this.date_n_info.Text = "          ";
+            // 
+            // adresse_info
+            // 
+            this.adresse_info.AutoSize = true;
+            this.adresse_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adresse_info.Location = new System.Drawing.Point(157, 151);
+            this.adresse_info.Name = "adresse_info";
+            this.adresse_info.Size = new System.Drawing.Size(130, 24);
+            this.adresse_info.TabIndex = 24;
+            this.adresse_info.Text = "          ";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(21, 194);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(250, 24);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "Montant du compte : ";
+            // 
+            // tel_info
+            // 
+            this.tel_info.AutoSize = true;
+            this.tel_info.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tel_info.Location = new System.Drawing.Point(180, 104);
+            this.tel_info.Name = "tel_info";
+            this.tel_info.Size = new System.Drawing.Size(130, 24);
+            this.tel_info.TabIndex = 23;
+            this.tel_info.Text = "          ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(20, 104);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(154, 24);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Téléphone : ";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(21, 151);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(130, 24);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Adresse : ";
+            // 
+            // photo_client_consulter
+            // 
+            this.photo_client_consulter.Location = new System.Drawing.Point(246, 109);
+            this.photo_client_consulter.Name = "photo_client_consulter";
+            this.photo_client_consulter.Size = new System.Drawing.Size(237, 165);
+            this.photo_client_consulter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.photo_client_consulter.TabIndex = 27;
+            this.photo_client_consulter.TabStop = false;
+            this.photo_client_consulter.Visible = false;
+            // 
             // valider_information_compte
             // 
             this.valider_information_compte.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valider_information_compte.Location = new System.Drawing.Point(489, 93);
+            this.valider_information_compte.Location = new System.Drawing.Point(489, 74);
             this.valider_information_compte.Name = "valider_information_compte";
             this.valider_information_compte.Size = new System.Drawing.Size(114, 26);
             this.valider_information_compte.TabIndex = 3;
@@ -611,7 +959,7 @@
             // num_compte_info
             // 
             this.num_compte_info.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_compte_info.Location = new System.Drawing.Point(246, 94);
+            this.num_compte_info.Location = new System.Drawing.Point(246, 75);
             this.num_compte_info.Name = "num_compte_info";
             this.num_compte_info.Size = new System.Drawing.Size(237, 26);
             this.num_compte_info.TabIndex = 2;
@@ -620,7 +968,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 96);
+            this.label16.Location = new System.Drawing.Point(16, 77);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(238, 24);
             this.label16.TabIndex = 1;
@@ -759,7 +1107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(916, 562);
+            this.ClientSize = new System.Drawing.Size(886, 562);
             this.Controls.Add(this.retrait);
             this.Controls.Add(this.ajouter_client);
             this.Controls.Add(this.menu);
@@ -777,6 +1125,16 @@
             this.versement.PerformLayout();
             this.consultation_solde.ResumeLayout(false);
             this.consultation_solde.PerformLayout();
+            this.liste.ResumeLayout(false);
+            this.liste.PerformLayout();
+            this.modifier_client.ResumeLayout(false);
+            this.modifier_client.PerformLayout();
+            this.rechercher.ResumeLayout(false);
+            this.rechercher.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.liste_client_lister)).EndInit();
+            this.conteneur_informations_consulter.ResumeLayout(false);
+            this.conteneur_informations_consulter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photo_client_consulter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -807,9 +1165,9 @@
         private System.Windows.Forms.Button faire_versement;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button rechercher_menu;
+        private System.Windows.Forms.Button modifier_client_menu;
+        private System.Windows.Forms.Button lister_client;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton compte_epargne;
         private System.Windows.Forms.RadioButton compte_courant;
@@ -846,6 +1204,35 @@
         private System.Windows.Forms.Label tel_info;
         private System.Windows.Forms.Label date_n_info;
         private System.Windows.Forms.Label nom_info;
+        private System.Windows.Forms.PictureBox photo_client_consulter;
+        private System.Windows.Forms.Panel conteneur_informations_consulter;
+        private System.Windows.Forms.Panel liste;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridView liste_client_lister;
+        private System.Windows.Forms.Panel modifier_client;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label labell;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox num_bancaire_modif;
+        private System.Windows.Forms.TextBox adresse_modif;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tel_modif;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button valider_modification_client;
+        private System.Windows.Forms.TextBox nom_modif;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel rechercher;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DateTimePicker d_fin;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.DateTimePicker d_debut;
+        private System.Windows.Forms.RadioButton recherche_versement;
+        private System.Windows.Forms.RadioButton recherche_retrait;
+        private System.Windows.Forms.RadioButton recherche_client;
+        private System.Windows.Forms.Button valider_recherche;
     }
 }
 

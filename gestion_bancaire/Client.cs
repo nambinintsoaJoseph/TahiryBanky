@@ -44,7 +44,7 @@ namespace gestion_bancaire
                 connection.Open(); 
 
                 // Insertion de l'information du Client dans la base de donnée :  
-                using (MySqlCommand command = new MySqlCommand("INSERT INTO client(nom, telephone, adresse, date_naissance, date_entree, chemin_image) VALUES(" + "\"" + nom_client + "\", \"" + adresse_client + "\", " + "\"" + telephone_client + "\", " + "\"" + date_naissance_client + "\", " + "\"" + date_entree_client + "\"" + ", \"" + photo_client + "\"" + ");", connection))
+                using (MySqlCommand command = new MySqlCommand("INSERT INTO client(nom, telephone, adresse, date_naissance, date_entree, chemin_image) VALUES(" + "\"" + nom_client + "\", \"" + telephone_client + "\", " + "\"" + adresse_client + "\", " + "\"" + date_naissance_client + "\", " + "\"" + date_entree_client + "\"" + ", \"" + photo_client + "\"" + ");", connection))
                 {
                     command.ExecuteNonQuery(); 
                 }
@@ -61,17 +61,11 @@ namespace gestion_bancaire
                 effectuer_operation("INSERT INTO compte(id_client, montant_compte, type_compte) VALUES(" + dernierIDInseree + ", 0," +  "'" +type_compte + "'" +  ");", "Compte crée. Votre numero bancaire est " + dernierIDInseree + ".", true);
             }
         }
-
-        public void rechercher()
-        { 
-            // A implémenter...
-        }
-
          
-        public void modifier(string nom, string adresse, string telephone, string date_naissance, string photo, string date_entree)
+        public void modifier(string nom, string adresse, string telephone)
         {
-            string requetteModification = "UPDATE client SET nom=" + nom + ", telephone=" + telephone + ", adresse=" + adresse + ", date_naissance=" + date_naissance + ", chemin_image=" + photo + ");";
-            effectuer_operation(requetteModification, "La modification de ce compte a été effectué.", true); 
+            string requetteModification = "UPDATE client SET nom ='" + nom + "', adresse='" + adresse + "', telephone='" + telephone + "' WHERE id=" + id_client + ";";
+            effectuer_operation(requetteModification, "La modification de ce compte a été prise en compte.", true); 
         }
 
         public void supprimer()

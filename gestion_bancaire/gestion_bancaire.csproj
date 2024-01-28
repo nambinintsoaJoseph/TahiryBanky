@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +51,13 @@
     <Compile Include="Base_de_donnee.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Compte.cs" />
+    <Compile Include="Facture.cs" />
+    <Compile Include="Resultat_recherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultat_recherche.Designer.cs">
+      <DependentUpon>Resultat_recherche.cs</DependentUpon>
+    </Compile>
     <Compile Include="TahiryBanky.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Resultat_recherche.resx">
+      <DependentUpon>Resultat_recherche.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TahiryBanky.resx">
       <DependentUpon>TahiryBanky.cs</DependentUpon>
     </EmbeddedResource>
